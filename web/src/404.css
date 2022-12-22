@@ -1,0 +1,201 @@
+:root {
+    --primary-color: #333333;
+    --secondary-color: #4F4F4F;
+    --footer-color: #BDBDBD;
+    font-size: 62.5%;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  
+  body {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 0 2.4rem;
+    height: 100vh;
+  }
+  
+  header {
+    width: 100%;
+  }
+  
+  header h1 {
+    font-family: 'Inconsolata', monospace;
+    font-weight: 700;
+    font-size: 2.4rem;
+    line-height: 2.5rem;
+    color: var(--primary-color);
+    text-transform: uppercase;
+    padding: 1rem 0;
+  }
+  
+  section.hero {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  
+  section.hero div.hero-img {
+    padding: 0 2rem;
+    margin: 6rem 0;
+  }
+  
+  section.hero div.hero-img img {
+    width: 100%;
+  }
+  
+  section.hero div.hero-description h1,
+  section.hero div.hero-description p,
+  section.hero div.hero-description a {
+    font-family: 'Space Mono', monospace;
+  }
+  
+  section.hero div.hero-description h1 {
+    font-size: 4.8rem;
+    font-weight: 700;
+    line-height: 5.8rem;
+    color: var(--primary-color);
+  }
+  
+  section.hero div.hero-description p {
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 2.6rem;
+    color: var(--secondary-color);
+    margin-top: 3rem;
+    margin-bottom: 6.5rem;
+  }
+  
+  section.hero div.hero-description a {
+    font-size: 1.4rem;
+    line-height: 2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 2.4rem 4.3rem;
+    color: #fff;
+    background-color: var(--primary-color);
+  }
+  
+  footer {
+    margin-top: 10rem;
+    margin-bottom: 2.4rem;
+  }
+  
+  footer p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.3rem;
+    line-height: 1.7rem;
+    font-weight: 700;
+    color: var(--footer-color);
+    text-align: center;
+  }
+  
+  @media only screen and (min-width: 680px) {
+    header h1 {
+      font-size: 2.4rem;
+      line-height: 2.4rem;
+      padding: 3rem 0;
+    }
+    section.hero div.hero-img {
+      width: 80%;
+    }
+    section.hero div.hero-description {
+      width: 80%;
+    }
+  }
+  
+  @media only screen and (min-width: 960px) {
+    section.hero div.hero-img {
+      width: 70%;
+    }
+    section.hero div.hero-description {
+      width: 90%;
+    }
+    section.hero div.hero-description h1 {
+      font-size: 6rem;
+      line-height: 7rem;
+    }
+    section.hero div.hero-description p {
+      font-size: 2rem;
+      line-height: 3rem;
+      margin-top: 5rem;
+      margin-bottom: 6rem;
+    }
+    section.hero div.hero-description a {
+      font-size: 1.4rem;
+      line-height: 2rem;
+      padding: 2.4rem 4.3rem;
+    }
+    footer {
+      margin-top: 5rem;
+    }
+    footer p {
+      font-size: 2.4rem;
+      padding: 2rem 0;
+    }
+  }
+  
+  @media only screen and (min-width: 1025px) {
+    section.hero {
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row;
+    }
+  }
+  
+  @media only screen and (min-width: 1200px) {
+    section.hero div.hero-img {
+      width: 40%;
+    }
+    section.hero div.hero-description {
+      width: 50%;
+    }
+    section.hero div.hero-description h1 {
+      width: 90%;
+    }
+    section.hero div.hero-description p {
+      width: 70%;
+    }
+  }
+  
+  @media only screen and (min-width: 1600px) {
+    section.hero div.hero-img {
+      width: 40%;
+    }
+    section.hero div.hero-description {
+      width: 60%;
+    }
+  }
+  /*# sourceMappingURL=style.css.map */
+
+
+
+
+
+
+  
