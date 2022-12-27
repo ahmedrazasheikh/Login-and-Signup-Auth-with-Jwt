@@ -2,8 +2,8 @@ import React from 'react'
 import './404.css'
 import Scarecrow from './Scarecrow.png'
 import { Link } from "react-router-dom";
-const NotFound = () => {
 
+const NotFound = () => {
   return (
     <div>
          <header>

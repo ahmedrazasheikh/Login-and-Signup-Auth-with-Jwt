@@ -1,7 +1,6 @@
 // import React from 'react'
 // import ReactDOM from 'react-dom/client'
 // import App from './App'
-// import "./index.css"
 // import Home from './Components/Home';
 
 // ReactDOM.createRoot(document.getElementById('root')).render(
@@ -12,6 +11,7 @@
   
   
   import React from 'react';
+  import "./index.css"
   import 'bootstrap/dist/css/bootstrap.min.css';
   import ReactDOM from 'react-dom/client';
 import './index.css';
