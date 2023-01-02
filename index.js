@@ -1,4 +1,3 @@
-console.log("I am server file");
 import express from 'express';
 const app = express()
 import cors from 'cors'
@@ -7,6 +6,7 @@ import cookieParser from 'cookie-parser';
 const port = process.env.PORT || 8000
 import loginsignup from './Routes/Login and Sign.js'
 
+console.log("I am server file");
 app.use(express.json());
 app.use(cookieParser());
 // app.use(cors({
@@ -14,6 +14,7 @@ app.use(cookieParser());
 //     credentials: true
 // }));
 app.use('/api/v1', loginsignup)
+app.use('/')
 app.use('/api/v1', (req, res, next) => {
 
     console.log("req.cookies: ", req.cookies);
@@ -55,6 +56,12 @@ app.use('/api/v1', (req, res, next) => {
         }
     });
 })
+
+
+const __dirname = path.resolve();
+app.use('/', express.static(path.join(__dirname, './web/build')))
+app.use('*', express.static(path.join(__dirname, './web/build')))
+
 app.listen(port, () => {
     console.log(`http://localhost:${port}`)
 })
