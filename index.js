@@ -3,6 +3,7 @@ const app = express()
 import cors from 'cors'
 import mongoose from 'mongoose';
 import cookieParser from 'cookie-parser';
+import path from 'path';
 const port = process.env.PORT || 8000
 import loginsignup from './Routes/Login and Sign.js'
 
