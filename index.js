@@ -10,11 +10,13 @@ console.log("I am server file");
 app.use(express.json());
 app.use(cookieParser());
 // app.use(cors({
-//     origin: ['http://localhost:5173', "*"],
-//     credentials: true
-// }));
+    //     origin: ['http://localhost:5173', "*"],
+    //     credentials: true
+    // }));
+    app.use('/', (req,res)=>{
+        console.log("Ahmed Raza")
+    })
 app.use('/api/v1', loginsignup)
-app.use('/')
 app.use('/api/v1', (req, res, next) => {
 
     console.log("req.cookies: ", req.cookies);
