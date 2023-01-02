@@ -9,6 +9,8 @@ import { useState } from 'react';
 let baseUrl = "";
 if (window.location.href.split(":")[0] === "http") {
   baseUrl = "http://localhost:8000/api/v1"
+}else{
+  baseUrl= "/api/v1"
 }
 const Login = () => {
   const dispatch = useDispatch()
