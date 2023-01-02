@@ -11,10 +11,6 @@ console.log("I am server file");
 app.use(express.json());
 app.use(cookieParser());
 
-app.use('/', (req, res) => {
-
-    res.send("Ahmed Raza")
-})
 
 app.use('/api/v1', loginsignup)
 app.use('/api/v1', (req, res, next) => {
