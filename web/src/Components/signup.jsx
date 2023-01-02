@@ -9,7 +9,7 @@ const Signup = () => {
   const [email, setEmail] = useState()
   const [result, setResult] = useState("")
   const [password, setepassword] = useState()
-  const baseUrl = 'http://localhost:5002'
+  const baseUrl = 'http://localhost:8000/api/v1'
 
   const signup = async () => {
     try {

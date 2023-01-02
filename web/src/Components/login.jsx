@@ -1,15 +1,23 @@
+import { useSelector, useDispatch } from 'react-redux'
+import { Loginscheck , Logout } from '../Redux/loginSlice'
 import React from 'react'
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form'
 import axios from "axios"
 import { useState } from 'react';
-const baseUrl = 'http://localhost:5002'
+const baseUrl = 'http://localhost:8000/api/v1'
 const Login = () => {
-const[email,setEmail] = useState()
-const[password,setPassword] = useState()
-const [result, setResult] = useState("");
+  const dispatch = useDispatch()
+  const LoginBoolean = useSelector((state) => state.boolean.value)
+  console.log(LoginBoolean)
+  // dispatch(inputValue(input))
+
+  const[email,setEmail] = useState()
+  const[password,setPassword] = useState()
+  const [result, setResult] = useState("");
 const logindata =  async ()=>{
   try {
+    dispatch(Loginscheck())
     let response = await axios.post(`${baseUrl}/login`, {
         email: email,
         password: password
@@ -18,19 +26,41 @@ const logindata =  async ()=>{
     })
     console.log("login successful");
     setResult("login successful")
-
-} catch (e) {
+    
+  } catch (e) {
     console.log("e: ", e);
+  }
+  
+  
+  
+}
+
+const logoutHandler = async () => {
+  
+  try {
+    let response = await axios.post(`${baseUrl}/logout`,
+    {},
+    {
+      withCredentials: true
+    })
+    console.log("response: ", response);
+    
+    dispatch(Logout)
+  } catch (error) {
+    console.log("axios error: ", error);
+  }
+
 }
 
 
-
-}
   return (
     <div  style={{"display" : "flex" , "flexDirection" : "column" , "alignItems" : "center"}} >
         <h1   className='text-3xl font-bold underline' >    Login Form!!</h1>
         {/* <a href="" >Ahemd Raza </a> */}
+      <button  onClick={logoutHandler} style={{"position" :"absolute" , "right" : "0px"}} >Logout</button>
        <Form>
+
+
       <Form.Group className="mb-3" controlId="formBasicEmail">
         <Form.Label>Email address</Form.Label>
         <Form.Control   onChange={(e)=>{
@@ -59,6 +89,10 @@ setEmail(e.target.value)
       </Button>
     </Form>
     <p>{result}</p>
+
+
+
+    {LoginBoolean ?  <h1> Login </h1>: <h1> Logout</h1> }
     </div>
   )
 }
